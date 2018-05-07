@@ -907,17 +907,17 @@ def print_weights(n_idx, e_idx):
 if __name__ == '__main__':
     from DirectedWeightedGraph import DWGraph
 
-    g = DWGraph.from_file_edge_list("../../data/art_ex1.graph",
+    g = DWGraph.from_file_edge_list("art_ex1.graph",
                                     is_weighted=False,
                                     make_undirected=not False,
                                     skip_first_line=False)
-    g.add_labels_from_file("../../data/art_ex1.labels")
+    g.add_labels_from_file("art_ex1.labels")
 
-    g0 = DWGraph.from_file_edge_list("../../data/art_template1.graph",
+    g0 = DWGraph.from_file_edge_list("art_template1.graph",
                                      is_weighted=False,
                                      make_undirected=not False,
                                      skip_first_line=False)
-    g0.add_labels_from_file("../../data/art_template1.labels")
+    g0.add_labels_from_file("art_template1.labels")
     g = add_original_enumeration(g)
     g0 = add_original_enumeration(g0)
     prop_label_g = g.vp['label']
